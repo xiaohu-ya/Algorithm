@@ -1,2 +1,2 @@
 # Algorithm
-Algorithm learning
+  自己开始刷牛客可力扣的题目，该仓库主要是自己学习过程中的一些笔记。
