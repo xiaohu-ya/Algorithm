@@ -17,6 +17,15 @@ public class LC96 {
      * 示例
      * 输入：[[1,2,3],[4,5,6],[7,8,9]]
      * 输出：[1,2,3,6,9,8,7,4,5]
+     *
+     *     left      right
+     *      0  1   2  3
+     * ***********************
+     * 0 *  1  2   3   4    top
+     * 1 *  5  6   7   8
+     * 2 *  9  10  11  12   bottom
+     *
+     * 随便举一个m*n的矩阵，图示能够清晰理解
      */
 
     public ArrayList<Integer> spiralOrder(int[][] matrix) {
