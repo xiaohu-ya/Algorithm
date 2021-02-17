@@ -18,38 +18,6 @@ public class LC45 {
      * 返回值
      * 3
      */
-    public static int index = 0;
-
-    //节点类
-    public static class Node{
-        Node left;
-        Node right;
-        int data;
-
-        Node(){
-            left = null;
-            right = null;
-        }
-
-        Node(int data){
-            this.data = data;
-        }
-
-        public void setData(int data) {
-            this.data = data;
-        }
-    }
-
-    public static Node CreateTree(Node node, int[] a){
-
-    }
-
-
-    public static void main(String[] args) {
-        Node root = new Node();
-        int[] a = new int[]{1,2,3,4,0,0,5};
-        root = CreateTree(root,a)
-    }
 
 //    public int maxDepth (TreeNode root) {
 //        // write code here
