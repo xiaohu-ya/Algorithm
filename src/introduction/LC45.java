@@ -22,16 +22,16 @@ public class LC45 {
 //    public int maxDepth (TreeNode root) {
 //        // write code here
 //        if(root == null)return 0;
-//        Queue<TreeNode> q = new LinkedList<TreeNode>();
+//        Queue<TreeNode> q = new LinkedList<TreeNode>();//定义一个队列来存储遍历树的节点
 //        q.add(root);
 //        int n = 0;
 //        int res = 0;
 //        while(!q.isEmpty()){
 //            n = q.size();
 //            for(int i = 0;i<n;i++){
-//                TreeNode node = q.poll();
-//                if(node.left != null)q.add(node.left);
-//                if(node.right != null)q.add(node.right);
+//                TreeNode node = q.poll();//取出队列的第一个元素
+//                if(node.left != null)q.add(node.left);//左孩子不为空就进队列
+//                if(node.right != null)q.add(node.right);//右孩子不为空就进队列
 //            }
 //            res++;
 //        }
