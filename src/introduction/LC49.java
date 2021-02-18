@@ -1,5 +1,10 @@
 package src.introduction;
 
+import src.Tree;
+
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * @PROJECT_NAME: algorithm
  * @USER: xiaohu
@@ -29,12 +34,24 @@ public class LC49 {
      * @return bool布尔型
      */
 
-
-//    public boolean isSameTree (TreeNode p, TreeNode q) {
+//    public boolean isSameTree (Tree.TreeNode p,Tree.TreeNode q) {
 //        // 两棵树相等的条件是 根节点的值相同，同时左右子树也相同
 //        if(p == null && q == null)  return true;
 //        if(p == null || q == null)  return false;
 //        if (p.val != q.val) return false;
 //        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
 //    }
+
+    public static void main(String[] args) {
+        Tree tree = new Tree();
+        int[] a = new int[]{1,2,3,4,5,6,7,8,9};
+        int[] b = new int[]{1,2,3,4,5,6,7,8,9};
+        List<Tree.TreeNode> list1 = new LinkedList<>();
+        tree.createTree(a,list1);
+        Tree.TreeNode treeNode1 = list1.get(0);
+        List<Tree.TreeNode> list2 = new LinkedList<>();
+        tree.createTree(b,list2);
+        Tree.TreeNode treeNode2 = list1.get(0);
+        tree.preOrderTraversal(treeNode2);
+    }
 }
