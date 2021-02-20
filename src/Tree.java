@@ -50,15 +50,19 @@ public class Tree {
     public void  createTree(int[] a,List<TreeNode> nodeList){
         //将数组变成node节点
         for(int index=0;index<a.length;index++){
-            TreeNode node = new TreeNode(a[index]);
-            nodeList.add(node);
+            if (a[index] != 0){
+                TreeNode node = new TreeNode(a[index]);
+                nodeList.add(node);
+            }
         }
         //给所有父节点设定子节点
         for(int index=0;index<nodeList.size()/2-1;index++){
             //编号为n的节点他的左子节点编号为2*n 右子节点编号为2*n+1 但是因为list从0开始编号，所以还要+1
             //这里父节点有1（2,3）,2（4,5）,3（6,7）,4（8,9） 但是最后一个父节点有可能没有右子节点 需要单独处理
-            nodeList.get(index).setLeft(nodeList.get(index*2+1));
-            nodeList.get(index).setRight(nodeList.get(index*2+2));
+            if (a[index] != 0){
+                nodeList.get(index).setLeft(nodeList.get(index*2+1));
+                nodeList.get(index).setRight(nodeList.get(index*2+2));
+            }
         }
         //单独处理最后一个父节点  因为它有可能没有右子节点
         int index = nodeList.size()/2-1;
