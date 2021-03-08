@@ -42,7 +42,7 @@ public class LongestCommonPrefix {
         while (index < length && str1.charAt(index) == str2.charAt(index)){
             index++;
         }
-        //substring(int beginIndex, int endIndex)的作用就是截取父字符串的某一部分,
+        //substring(int beginIndex, int endIndex)的作用就是截取父字符串的某一部分
         return str1.substring(0,index);
     }
 
