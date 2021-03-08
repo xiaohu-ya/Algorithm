@@ -1,7 +1,5 @@
 package src.array;
 
-import java.util.Scanner;
-
 /**
  * @PROJECT_NAME: algorithm
  * @USER: xiaohu
