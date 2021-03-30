@@ -33,10 +33,11 @@ public class climbStairs {
      *n表示你到达的台阶数，用dp[n]来表示到达第n阶的方法总数
      */
     public void solution(int n){
-        int[] dp = new int[n+1];
-        dp[1] = 1;
-        dp[2] = 2;
-        for (int i = 3;i <= n;i++){
+        int[] dp = new int[50];
+        dp[1] = 0;
+        dp[2] = 1;
+        dp[3] = 2;
+        for (int i = 4;i <= n;i++){
             dp[i] = dp[i-1] + dp[i-2];
         }
         System.out.println(dp[n]);
@@ -45,6 +46,9 @@ public class climbStairs {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        new climbStairs().solution(n);
+        for (int i = 1;i <= n;i++){
+            int m = scanner.nextInt();
+            new climbStairs().solution(m);
+        }
     }
 }
